@@ -1,38 +1,37 @@
-/* พื้นหลัง */
+/* พื้นฐานหน้าเว็บ */
 body {
     margin: 0;
     padding: 0;
-    color: white;
     font-family: Arial, sans-serif;
+    color: white;
     text-align: center;
-
     background: url('../img/zombie.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* กล่องดำโปร่ง */
+/* กล่องครึ่งโปร่ง */
 .container {
-    background: rgba(0, 0, 0, 0.60);
+    background: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+    margin: 50px auto;
     width: 90%;
-    max-width: 600px;
-    padding: 25px;
-    margin: 40px auto;
-    border-radius: 12px;
+    max-width: 500px;
+    border-radius: 10px;
 }
 
 /* ปุ่ม */
-.button {
+a.button {
     display: inline-block;
-    margin: 8px 5px;
-    padding: 10px 22px;
+    padding: 10px 20px;
+    margin: 10px;
     background: #ff2e2e;
     color: white;
     text-decoration: none;
-    font-size: 18px;
     border-radius: 6px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
-.button:hover {
+a.button:hover {
     background: #ff0000;
 }
