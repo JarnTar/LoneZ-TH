@@ -27,35 +27,37 @@ h2 {
 /* ปุ่มเมนูบนสุด */
 .button {
     display: inline-block;
-    padding: 12px 22px;
-    background: #d40000;
+    padding: 16px 30px;          /* ใหญ่ขึ้น */
+    background: #d40000;         /* แดงหลัก */
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 8px;
-    margin: 5px;
+    font-size: 22px;             /* ตัวอักษรใหญ่ขึ้น */
+    border-radius: 10px;
+    margin: 6px;
     font-weight: bold;
-    box-shadow: 0 0 10px rgba(255,0,0,0.5);
+    box-shadow: 0 0 12px rgba(255,0,0,0.6); /* เรืองแสงแดง */
     transition: 0.2s;
 }
 
 .button:hover {
-    background: #9b0000;
-    box-shadow: 0 0 15px rgba(255,0,0,0.8);
+    background: #9b0000;         /* แดงเข้มเมื่อ hover */
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
+
 
 /* ปุ่มด้านล่าง สมัครสมาชิก / ดาวน์โหลด */
 .button-large {
     display: inline-block;
-    padding: 14px 28px;
-    background: #d40000;
+    padding: 18px 34px;          /* ใหญ่ขึ้น */
+    background: #d40000;         /* แดง */
     color: white;
     text-decoration: none;
-    font-size: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
+    font-size: 24px;             /* ใหญ่ขึ้น */
+    border-radius: 12px;
+    margin-top: 12px;
     font-weight: bold;
-    box-shadow: 0 0 12px rgba(255,0,0,0.5);
+    box-shadow: 0 0 15px rgba(255,0,0,0.6);
+    transition: 0.2s;
 }
 
 .button-large:hover {
