@@ -2,21 +2,114 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>สมัครสมาชิก | LoneZ TH</title>
+    <title>สมัครสมาชิก LoneZ TH</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("../img/zombie.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .register-box {
+            width: 90%;
+            max-width: 450px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+        }
+
+        .register-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin: 12px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            font-size: 15px;
+        }
+
+        .captcha-box {
+            margin: 20px 0;
+            padding: 15px;
+            background: #ffe8c4;
+            border-radius: 6px;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 10px;
+            font-weight: bold;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            margin-top: 10px;
+            background: #40c057;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background: #2fa34a;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back-btn a {
+            color: #0044aa;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>ลงทะเบียนเล่นเซิร์ฟเวอร์</h1>
+    <div class="register-box">
+        <h2>สมัครเล่นเกม</h2>
 
-    <form>
-        <input type="text" placeholder="ชื่อผู้ใช้">
-        <input type="password" placeholder="รหัสผ่าน">
+        <label>ID</label>
+        <input type="text" placeholder="ตัวอักษร A-Z, a-z, 0-9 (8–12 ตัว)">
+
+        <label>รหัสผ่าน</label>
+        <input type="password" placeholder="ใส่รหัสผ่าน">
+
+        <label>กรอกรหัสผ่านใหม่อีกครั้ง</label>
         <input type="password" placeholder="ยืนยันรหัสผ่าน">
-        <button type="submit" class="button">สมัครสมาชิก</button>
-    </form>
-</div>
+
+        <label>อีเมล</label>
+        <input type="email" placeholder="อีเมล">
+
+        <div class="captcha-box">6482</div>
+
+        <input type="text" placeholder="กรอกตัวเลข 4 ตัวด้านบน">
+
+        <button class="btn">ถัดไป</button>
+
+        <div class="back-btn">
+            <a href="../index.html">กลับหน้าหลัก</a>
+        </div>
+    </div>
 
 </body>
 </html>
