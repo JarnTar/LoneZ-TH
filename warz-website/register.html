@@ -23,16 +23,23 @@
         h1 {
             font-size: 32px;
             margin-bottom: 10px;
+            color: #ff3c3c;
         }
 
         .register-box {
             width: 90%;
             max-width: 450px;
             margin: 20px auto;
-            background: rgba(0, 0, 0, 0.65);
+            background: rgba(0, 0, 0, 0.8);
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+        }
+
+        h2 {
+            color: #ff3c3c;
+            margin-bottom: 10px;
         }
 
         label {
@@ -40,7 +47,7 @@
             text-align: left;
             margin-top: 12px;
             font-size: 15px;
-            color: #ddd;
+            color: #ff9999;
         }
 
         input[type="text"],
@@ -49,17 +56,23 @@
             width: 100%;
             padding: 10px;
             border-radius: 6px;
-            border: none;
+            border: 1px solid #ff3c3c;
+            background: #1a1a1a;
+            color: white;
             font-size: 16px;
             margin-top: 5px;
         }
 
+        input::placeholder {
+            color: #bbbbbb;
+        }
+
         .captcha-box {
             margin-top: 15px;
-            background: #ffe1b3;
+            background: #662222;
             padding: 15px;
             border-radius: 6px;
-            color: black;
+            color: #ffb3b3;
             font-size: 26px;
             font-weight: bold;
             letter-spacing: 8px;
@@ -68,16 +81,18 @@
         button {
             width: 100%;
             padding: 12px;
-            background: #007bff;
+            background: #d40000;
             border: none;
             border-radius: 6px;
             font-size: 18px;
             margin-top: 15px;
             color: white;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255,0,0,0.4);
         }
 
         button:hover {
-            background: #005fcc;
+            background: #a10000;
         }
 
         .back {
@@ -85,7 +100,7 @@
         }
 
         .back a {
-            color: #00bfff;
+            color: #ff6666;
         }
     </style>
 </head>
@@ -97,25 +112,25 @@
         <p>สมัครสมาชิกเพื่อเข้าเล่นเซิร์ฟเวอร์</p>
 
         <div class="register-box">
-            <h2>สมัครสมาชิก</h2>
+            <h2>สมัครเล่นเกม</h2>
 
-            <label>ID ผู้ใช้</label>
+            <label>ID</label>
             <input type="text" placeholder="ตัวอักษร A-Z, a-z, 0-9 (8–12 ตัว)">
 
             <label>รหัสผ่าน</label>
-            <input type="password" placeholder="กรอกรหัสผ่าน">
+            <input type="password" placeholder="ใส่รหัสผ่าน">
 
-            <label>ยืนยันรหัสผ่าน</label>
-            <input type="password" placeholder="กรอกรหัสผ่านอีกครั้ง">
+            <label>กรอกรหัสผ่านใหม่อีกครั้ง</label>
+            <input type="password" placeholder="ยืนยันรหัสผ่าน">
 
             <label>อีเมล</label>
             <input type="email" placeholder="อีเมล">
 
             <div class="captcha-box">6482</div>
 
-            <input type="text" placeholder="กรอกตัวเลขด้านบน">
+            <input type="text" placeholder="กรอกตัวเลข 4 ตัวด้านบน">
 
-            <button>สมัครสมาชิก</button>
+            <button>ถัดไป</button>
 
             <div class="back">
                 <a href="../index.html">กลับหน้าหลัก</a>
