@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>สมัครสมาชิก - LoneZ TH</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="register-page">
+
+<div class="register-box">
+    <h1>สมัครสมาชิก</h1>
+
+    <form id="registerForm">
+        <label>ชื่อผู้ใช้</label>
+        <input type="text" placeholder="Username" required>
+
+        <label>รหัสผ่าน</label>
+        <input type="password" placeholder="Password" required>
+
+        <label>อีเมล</label>
+        <input type="email" placeholder="Email" required>
+
+        <button type="submit">สมัครสมาชิก</button>
+    </form>
+
+    <a href="index.html" class="back-link">← กลับหน้าหลัก</a>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("สมัครสมาชิกสำเร็จ!");
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>
