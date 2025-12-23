@@ -69,3 +69,11 @@ h2 {
     margin-bottom: 20px;
     filter: drop-shadow(0 0 10px rgba(255,0,0,0.7)); /* เงาแดง */
 }
+/* โลโก้ */
+.logo img {
+    width: 280px;          /* ปรับขนาดโลโก้ */
+    display: block;
+    margin: 0 auto;        /* จัดให้อยู่ตรงกลาง */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7)); /* เงาสีแดง */
+}
