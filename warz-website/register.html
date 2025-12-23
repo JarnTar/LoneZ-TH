@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <title>สมัครสมาชิก LoneZ TH</title>
     <link rel="stylesheet" href="../css/style.css">
+
     <style>
         body {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
             background: url("../img/zombie.jpg") no-repeat center center fixed;
             background-size: cover;
-            margin: 0;
-            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
         }
 
         .register-box {
             width: 90%;
             max-width: 450px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.85);
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.65);
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
-        }
-
-        .register-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 26px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
         }
 
         label {
-            font-size: 16px;
-            font-weight: bold;
             display: block;
-            margin: 12px 0 5px;
+            text-align: left;
+            margin-top: 12px;
+            font-size: 15px;
+            color: #ddd;
         }
 
         input[type="text"],
@@ -42,72 +49,78 @@
             width: 100%;
             padding: 10px;
             border-radius: 6px;
-            border: 1px solid #bbb;
-            font-size: 15px;
+            border: none;
+            font-size: 16px;
+            margin-top: 5px;
         }
 
         .captcha-box {
-            margin: 20px 0;
+            margin-top: 15px;
+            background: #ffe1b3;
             padding: 15px;
-            background: #ffe8c4;
             border-radius: 6px;
-            font-size: 24px;
-            text-align: center;
-            letter-spacing: 10px;
+            color: black;
+            font-size: 26px;
             font-weight: bold;
+            letter-spacing: 8px;
         }
 
-        .btn {
+        button {
             width: 100%;
             padding: 12px;
-            font-size: 18px;
-            margin-top: 10px;
-            background: #40c057;
-            color: white;
+            background: #007bff;
             border: none;
             border-radius: 6px;
+            font-size: 18px;
+            margin-top: 15px;
+            color: white;
         }
 
-        .btn:hover {
-            background: #2fa34a;
+        button:hover {
+            background: #005fcc;
         }
 
-        .back-btn {
-            text-align: center;
+        .back {
             margin-top: 15px;
         }
 
-        .back-btn a {
-            color: #0044aa;
+        .back a {
+            color: #00bfff;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="register-box">
-        <h2>สมัครเล่นเกม</h2>
+    <div class="container">
+        <h1>LoneZ TH</h1>
+        <p>สมัครสมาชิกเพื่อเข้าเล่นเซิร์ฟเวอร์</p>
 
-        <label>ID</label>
-        <input type="text" placeholder="ตัวอักษร A-Z, a-z, 0-9 (8–12 ตัว)">
+        <div class="register-box">
+            <h2>สมัครสมาชิก</h2>
 
-        <label>รหัสผ่าน</label>
-        <input type="password" placeholder="ใส่รหัสผ่าน">
+            <label>ID ผู้ใช้</label>
+            <input type="text" placeholder="ตัวอักษร A-Z, a-z, 0-9 (8–12 ตัว)">
 
-        <label>กรอกรหัสผ่านใหม่อีกครั้ง</label>
-        <input type="password" placeholder="ยืนยันรหัสผ่าน">
+            <label>รหัสผ่าน</label>
+            <input type="password" placeholder="กรอกรหัสผ่าน">
 
-        <label>อีเมล</label>
-        <input type="email" placeholder="อีเมล">
+            <label>ยืนยันรหัสผ่าน</label>
+            <input type="password" placeholder="กรอกรหัสผ่านอีกครั้ง">
 
-        <div class="captcha-box">6482</div>
+            <label>อีเมล</label>
+            <input type="email" placeholder="อีเมล">
 
-        <input type="text" placeholder="กรอกตัวเลข 4 ตัวด้านบน">
+            <div class="captcha-box">6482</div>
 
-        <button class="btn">ถัดไป</button>
+            <input type="text" placeholder="กรอกตัวเลขด้านบน">
 
-        <div class="back-btn">
-            <a href="../index.html">กลับหน้าหลัก</a>
+            <button>สมัครสมาชิก</button>
+
+            <div class="back">
+                <a href="../index.html">กลับหน้าหลัก</a>
+            </div>
+
         </div>
     </div>
 
