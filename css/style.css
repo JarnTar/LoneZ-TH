@@ -1,3 +1,4 @@
+/* พื้นหลัง */
 body {
     margin: 0;
     padding: 0;
@@ -8,12 +9,14 @@ body {
     text-align: center;
 }
 
+/* กล่องพื้นดำใส */
 .container {
     background: rgba(0, 0, 0, 0.5);
     padding: 40px;
     margin-top: 40px;
 }
 
+/* หัวข้อ */
 h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -27,53 +30,47 @@ h2 {
 /* ปุ่มเมนูบนสุด */
 .button {
     display: inline-block;
-    padding: 16px 30px;          /* ใหญ่ขึ้น */
-    background: #d40000;         /* แดงหลัก */
+    padding: 16px 30px;       /* ใหญ่ขึ้น */
+    background: #d40000;      /* แดงสด */
     color: white;
     text-decoration: none;
-    font-size: 22px;             /* ตัวอักษรใหญ่ขึ้น */
+    font-size: 22px;          /* ตัวใหญ่ขึ้น */
     border-radius: 10px;
     margin: 6px;
     font-weight: bold;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6); /* เรืองแสงแดง */
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6); /* เรืองแสง */
     transition: 0.2s;
 }
 
 .button:hover {
-    background: #9b0000;         /* แดงเข้มเมื่อ hover */
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.9); 
 }
 
-
-/* ปุ่มด้านล่าง สมัครสมาชิก / ดาวน์โหลด */
+/* ปุ่มด้านล่าง : สมัครสมาชิก / ดาวน์โหลด */
 .button-large {
     display: inline-block;
-    padding: 18px 34px;          /* ใหญ่ขึ้น */
-    background: #d40000;         /* แดง */
+    padding: 18px 34px;
+    background: #d40000;
     color: white;
     text-decoration: none;
-    font-size: 24px;             /* ใหญ่ขึ้น */
+    font-size: 24px;
     border-radius: 12px;
     margin-top: 12px;
     font-weight: bold;
-    box-shadow: 0 0 15px rgba(255,0,0,0.6);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
     transition: 0.2s;
 }
 
 .button-large:hover {
     background: #9b0000;
 }
+
 /* โลโก้ */
 .logo img {
-    width: 280px;                 /* ปรับขนาด */
+    width: 280px;                   /* ขนาดโลโก้ */
+    display: block;                 
+    margin: 0 auto;                 /* จัดกลาง */
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(255,0,0,0.7)); /* เงาแดง */
-}
-/* โลโก้ */
-.logo img {
-    width: 280px;          /* ปรับขนาดโลโก้ */
-    display: block;
-    margin: 0 auto;        /* จัดให้อยู่ตรงกลาง */
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7)); /* เงาสีแดง */
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7)); /* เงาแดง */
 }
