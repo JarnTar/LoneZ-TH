@@ -24,19 +24,40 @@ h2 {
     margin-bottom: 20px;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background: #d40000; /* แดงเลือด */
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    margin-top: 15px;
+/* ปุ่มเมนูบนสุด */
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #d40000;
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    margin: 5px;
     font-weight: bold;
-    box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    box-shadow: 0 0 10px rgba(255,0,0,0.5);
+    transition: 0.2s;
 }
 
-button:hover {
-    background: #a10000; /* แดงเข้ม */
+.button:hover {
+    background: #9b0000;
+    box-shadow: 0 0 15px rgba(255,0,0,0.8);
+}
+
+/* ปุ่มด้านล่าง สมัครสมาชิก / ดาวน์โหลด */
+.button-large {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(255,0,0,0.5);
+}
+
+.button-large:hover {
+    background: #9b0000;
 }
