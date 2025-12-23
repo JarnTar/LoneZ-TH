@@ -161,4 +161,12 @@ nav a:hover {
     nav {
         flex-wrap: wrap;
     }
+
+}/* พื้นหลังเลื่อนแบบ Parallax */
+.hero {
+    background-image: url("../img/zombie.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
