@@ -24,16 +24,19 @@ h2 {
     margin-bottom: 20px;
 }
 
-.button {
-    display: inline-block;
-    background: #007bff;
+button {
+    width: 100%;
+    padding: 12px;
+    background: #d40000; /* แดงเลือด */
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 15px;
     color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255,0,0,0.4);
 }
 
-.button:hover {
-    background: #0056b3;
+button:hover {
+    background: #a10000; /* แดงเข้ม */
 }
