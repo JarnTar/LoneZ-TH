@@ -63,3 +63,9 @@ h2 {
 .button-large:hover {
     background: #9b0000;
 }
+/* โลโก้ */
+.logo img {
+    width: 280px;                 /* ปรับขนาด */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,0,0,0.7)); /* เงาแดง */
+}
