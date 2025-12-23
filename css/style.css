@@ -1,38 +1,39 @@
-/* พื้นหลัง */
 body {
     margin: 0;
     padding: 0;
-    color: white;
     font-family: Arial, sans-serif;
-    text-align: center;
-
-    background: url('../img/zombie.jpg') no-repeat center center fixed;
+    background: url("../img/zombie.jpg") no-repeat center center fixed;
     background-size: cover;
+    color: white;
+    text-align: center;
 }
 
-/* กล่องดำโปร่ง */
 .container {
-    background: rgba(0, 0, 0, 0.60);
-    width: 90%;
-    max-width: 600px;
-    padding: 25px;
-    margin: 40px auto;
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin-top: 40px;
 }
 
-/* ปุ่ม */
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
 .button {
     display: inline-block;
-    margin: 8px 5px;
-    padding: 10px 22px;
-    background: #ff2e2e;
+    background: #007bff;
     color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 6px;
-    transition: 0.3s;
 }
 
 .button:hover {
-    background: #ff0000;
+    background: #0056b3;
 }
