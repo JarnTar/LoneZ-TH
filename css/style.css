@@ -42,22 +42,23 @@ body {
         drop-shadow(0 0 5px  #ff3300)
         drop-shadow(0 0 12px #ff6600);
 }
-/* ปุ่มล่าง – เติมเงิน & ร้านค้า */
+/* ปุ่มล่าง – เติมเงิน & ร้านค้า (สไตล์เดียวกับเมนูบน) */
 .button-large {
     display: inline-block;
-    padding: 12px 35px;
-    background: #d40000;
+    padding: 10px 30px;
+    background: #d40000;         /* สีปุ่ม */
     color: white;
     text-decoration: none;
-    font-size: 22px;
-    border-radius: 12px;
+    font-size: 20px;
+    border-radius: 10px;         /* มุมมน */
     font-weight: bold;
-    margin: 10px;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    margin: 8px;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);   /* เงาแดงเหมือนเมนูบน */
+    border: 3px solid #ff0000;   /* << เพิ่มกรอบเหมือนเมนูบน */
     transition: 0.25s;
 }
 
 .button-large:hover {
     background: #9b0000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
 }
