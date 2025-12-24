@@ -1,115 +1,92 @@
-/* ตั้งค่าพื้นหลัง */
+/* พื้นหลังเว็บ */
 body {
-margin: 0;
-padding: 0;
-font-family: sans-serif;
-background: url("../img/zombie.jpg") no-repeat center center fixed;
-background-size: cover;
-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url("../img/zombie.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
 
 /* ปุ่มเมนู */
 .button {
-display: inline-block;
-padding: 10px 30px;
-background: #d40000;
-color: white;
-text-decoration: none;
-font-size: 20px;
-font-weight: bold;
-border-radius: 12px;
-margin: 5px;
-border: 3px solid #ff0000;
-box-shadow: 0 0 12px rgba(255,0,0,0.6);
-transition: 0.25s;
+    display: inline-block;
+    padding: 12px 35px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin: 8px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    transition: 0.25s;
 }
 
 .button:hover {
-background: #9b0000;
-box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* ปุ่มเมนูล่าง */
+/* ปุ่มล่าง (ขนาดใหญ่ขึ้น) */
 .button-large {
-display: inline-block;
-padding: 12px 35px;
-background: #d40000;
-color: white;
-text-decoration: none;
-font-size: 22px;
-font-weight: bold;
-border-radius: 12px;
-margin: 10px;
-border: 3px solid #ff0000;
-box-shadow: 0 0 12px rgba(255,0,0,0.6);
-transition: 0.25s;
+    display: inline-block;
+    padding: 14px 45px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin: 10px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    transition: 0.25s;
 }
 
 .button-large:hover {
-background: #9b0000;
-box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* โลโก้ใหญ่ + เงาไฟ */
+/* โลโก้ */
 .main-logo {
-width: 600px;
-max-width: 95%;
-display: block;
-margin: 30px auto;
-filter:
-drop-shadow(0 0 5px #ff3300)
-drop-shadow(0 0 12px #ff3300);
+    width: 600px;
+    max-width: 95%;
+    display: block;
+    margin: 30px auto;
+    filter:
+        drop-shadow(0 0 5px #ff3300)
+        drop-shadow(0 0 12px #ff3300);
 }
 
-/* ข้อความเลื่อน */
-.scroll-text {
-width: 100%;
-overflow: hidden;
-white-space: nowrap;
-box-sizing: border-box;
-margin: 10px 0 20px 0;
-}
-
-.scroll-text span {
-display: inline-block;
-font-size: 22px;
-font-weight: bold;
-color: #ffffff;
-padding-right: 60px;
-animation: scrollLoop 18s linear infinite;
-}
-
-/* เลื่อนแบบไม่มีช่องว่าง */
-@keyframes scrollLoop {
-0% { transform: translateX(100%); }
-100% { transform: translateX(-100%); }
-}
 /* กล่องประกาศแบบ End Credit */
 .notice-credit-box {
     position: relative;
     width: 92%;
     max-width: 900px;
-    height: 350px; /* ความสูงของกรอบ */
+    height: 380px;
     margin: 30px auto;
-    overflow: hidden; /* ซ่อนส่วนที่เลื่อนออก */
+    overflow: hidden;
     background: rgba(0,0,0,0.45);
     padding: 15px;
     border-radius: 18px;
     box-shadow: 0 0 12px rgba(0,0,0,0.5);
 }
 
-/* กล่องข้อความข้างใน */
+/* ข้อความ End Credit เลื่อนขึ้น */
 .notice-credit-content {
     position: absolute;
     width: 100%;
-    bottom: -100%; /* เริ่มจากล่างสุด */
+    bottom: -100%;
     font-size: 22px;
     line-height: 1.8;
     color: white;
     animation: creditScroll 28s linear infinite;
 }
 
-/* เอฟเฟกต์เลื่อนขึ้นแบบ End Credit */
+/* เอฟเฟกต์ End Credit */
 @keyframes creditScroll {
     0% { bottom: -100%; }
     100% { bottom: 100%; }
