@@ -1,89 +1,126 @@
+/* --- พื้นหลัง + ฟอนต์ --- */
 body {
     margin: 0;
     padding: 0;
-    background: url('../img/Zz1.jpeg') no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    background: url("../img/WarzLonez.png") no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Tahoma', sans-serif;
+    text-align: center;
     color: white;
 }
 
-/* โลโก้ */
+/* --- โลโก้ --- */
 .logo-container {
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .logo {
-    width: 60%;
-    max-width: 420px;
+    width: 330px;
+    max-width: 90%;
+    filter: drop-shadow(0 0 10px red);
 }
 
-/* ข้อความต้อนรับ */
-.welcome-text {
+/* --- หัวข้อเรืองแสงด้านบน --- */
+.top-title-box {
+    width: 95%;
+    max-width: 750px;
+    margin: 20px auto 15px auto;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
     text-align: center;
-    font-size: 30px;
+}
+
+.top-title-box h2 {
+    margin: 0;
+    font-size: 28px;
     font-weight: bold;
-    margin-top: 20px;
     color: #ffffff;
-    text-shadow: 2px 2px 8px #000;
+    text-shadow: 0 0 12px rgba(255, 0, 0, 1);
+}
+
+/* --- ข้อความต้อนรับ --- */
+.welcome-text {
+    font-size: 20px;
+    width: 95%;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 
 .welcome-text a {
-    color: #4aa3ff;
+    color: #00c3ff;
     font-weight: bold;
-    text-decoration: underline;
 }
 
-/* เมนู */
+/* --- ปุ่มเมนู --- */
 .menu-container {
-    text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.second-row {
+    margin-top: 10px;
 }
 
 .menu-btn {
     background: red;
     border: none;
-    padding: 12px 25px;
-    border-radius: 12px;
     color: white;
-    font-size: 20px;
-    margin: 5px;
+    padding: 10px 22px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 6px;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 0px 0px 10px #000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    transition: 0.2s;
 }
 
-/* กล่องประกาศ */
+.menu-btn:hover {
+    background: #b30000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
+}
+
+/* --- กล่องประกาศ --- */
 .announce-box {
-    width: 100%;
+    width: 95%;
     max-width: 900px;
-    margin: 40px auto 0 auto;
-    background: rgba(0, 0, 0, 0.55);
-    padding: 25px;
-    border-radius: 10px;
-    font-size: 20px;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
+    margin: 25px auto;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 0, 0, 0.6);
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
 }
 
-/* ข้อความเลื่อน */
-.announce-text {
-    display: inline-block;
-    animation: scrollUp 22s linear infinite;
+.announce-text p {
+    font-size: 18px;
+    margin: 8px 0;
 }
 
-@keyframes scrollUp {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
+/* --- สำหรับมือถือ --- */
+@media screen and (max-width: 600px) {
+
+    .welcome-text {
+        font-size: 17px;
     }
-    10% {
-        transform: translateY(0);
-        opacity: 1;
+
+    .menu-btn {
+        font-size: 16px;
+        padding: 9px 18px;
     }
-    100% {
-        transform: translateY(-100%);
-        opacity: 1;
+
+    .announce-text p {
+        font-size: 16px;
+    }
+
+    .top-title-box h2 {
+        font-size: 24px;
     }
 }
