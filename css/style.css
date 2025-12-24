@@ -91,3 +91,15 @@ h2 {
     display: block;
     margin: 30px auto;   /* จัดกลาง + เว้นระยะบน */
 }
+/* เอฟเฟกต์เงาไฟรอบโลโก้ */
+.main-logo {
+    width: 600px;
+    max-width: 90%;
+    display: block;
+    margin: 30px auto;
+
+    filter: drop-shadow(0 0 10px #ff0000)
+            drop-shadow(0 0 20px #ff0000)
+            drop-shadow(0 0 35px #ff3300)
+            drop-shadow(0 0 55px #ff6600);
+}
