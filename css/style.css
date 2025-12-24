@@ -3,88 +3,105 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: url("../img/zombie.jpg") no-repeat center center fixed;
+    background: url('../img/zombie.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
 
-/* โลโก้ */
-.main-logo {
-    width: 600px;
-    max-width: 95%;
-    display: block;
-    margin: 25px auto 0 auto;
-    filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 12px #ff3300);
-}
-
-/* ข้อความเลื่อนแนวนอน */
+/* ข้อความเลื่อน (ยินดีต้อนรับสู่ LoneZ) */
 .welcome-scroll {
+    position: relative;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    margin-top: 5px;
-    text-align: center;
+    height: 40px;
+    margin-top: 10px;
 }
+
 .welcome-scroll span {
     display: inline-block;
     padding-left: 100%;
     font-size: 32px;
     font-weight: bold;
-    text-shadow: 0 0 8px black;
-    animation: scrollLeft 25s linear infinite;
-}
-@keyframes scrollLeft {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    text-shadow: 0 0 10px black;
+    animation: scrollLeft 20s linear infinite;
 }
 
-/* ปุ่มเมนู */
-.button,
-.button-large {
+@keyframes scrollLeft {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+}
+
+/* ลิงก์โปร่งใส กดได้ */
+.scroll-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: transparent;
+}
+
+/* ปุ่มเมนูบน */
+.menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
     display: inline-block;
     padding: 10px 30px;
     background: #d40000;
     color: white;
-    font-size: 22px;
-    font-weight: bold;
     text-decoration: none;
-    margin: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 2px solid #ff0000;
+    margin: 5px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: #900000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.8);
+}
+
+/* ปุ่มล่าง (เติมเงิน ร้านค้า) */
+.button-large {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
     border-radius: 12px;
     border: 3px solid #ff0000;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.2s;
+    margin: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    transition: 0.25s;
 }
-.button:hover,
+
 .button-large:hover {
-    background: #960000;
+    background: #900000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.8);
 }
 
-.button-large {
-    padding: 12px 38px;
-}
-
-/* กล่องประกาศเลื่อนขึ้นแบบ End Credit */
-.announce-credit {
-    width: 92%;
-    max-width: 900px;
-    height: 260px;
-    margin: 20px auto;
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-}
-
-.announce-content {
-    position: absolute;
-    bottom: -100%;
+/* กล่องประกาศด้านล่าง (เต็มกว้าง 100%) */
+.notice-box {
     width: 100%;
-    font-size: 22px;
-    line-height: 1.8em;
-    animation: creditUp 25s linear infinite;
+    max-width: 100%;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    box-sizing: border-box;
 }
 
-@keyframes creditUp {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-110%); }
+.notice-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
 }
