@@ -1,4 +1,3 @@
-/* พื้นหลัง */
 body {
     margin: 0;
     padding: 0;
@@ -6,94 +5,80 @@ body {
     background: url("../img/zombie.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
+    text-align: center;
+}
+
+/* โลโก้ */
+.logo {
+    margin-top: 20px;
+}
+.main-logo {
+    width: 600px;
+    max-width: 95%;
+    filter: drop-shadow(0 5px 8px #ff3300) drop-shadow(0 0 12px #ff3300);
+}
+
+/* ข้อความยินดีต้อนรับ */
+.welcome {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.welcome a {
+    color: #00aaff;
+    text-decoration: underline;
 }
 
 /* ปุ่มเมนู */
-.button {
+.button, .button-large {
     display: inline-block;
     padding: 10px 30px;
     background: #d40000;
     color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
     border-radius: 12px;
-    margin: 5px;
-    border: 3px solid #ff0000;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.25s;
-}
-
-.button:hover {
-    background: #9b0000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
-}
-
-/* ปุ่มใหญ่ */
-.button-large {
-    display: inline-block;
-    padding: 12px 35px;
-    background: #d40000;
-    color: white;
-    text-decoration: none;
     font-size: 22px;
     font-weight: bold;
-    border-radius: 12px;
-    margin: 10px;
+    margin: 8px 10px;
+    text-decoration: none;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
-
-.button-large:hover {
-    background: #9b0000;
+.button:hover, .button-large:hover {
+    background: #960000;
     box-shadow: 0 0 18px rgba(255,0,0,0.9);
-}
-
-/* โลโก้ */
-.main-logo {
-    width: 600px;
-    max-width: 95%;
-    display: block;
-    margin: 30px auto;
-}
-
-/* ข้อความด้านบน (อยู่กับที่) */
-.welcome-fixed {
-    text-align: center;
-    font-size: 26px;
-    margin-top: -10px;
-}
-
-.welcome-fixed a {
-    color: #00aaff;
-    font-weight: bold;
 }
 
 /* กล่องประกาศ */
 .notice-box {
     width: 100%;
-    max-width: 100%;
-    margin-top: 30px;
+    margin: 40px auto 0;
     padding: 20px;
     background: rgba(0,0,0,0.60);
     border-radius: 10px;
-    box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
 }
 
-/* เลื่อนขึ้นแบบ End Credit */
+/* ข้อความแบบ End Credit เลื่อนขึ้น */
 .notice-scroll {
-    animation: scrollUp 25s linear infinite;
+    display: inline-block;
+    animation: scrollUp 22s linear infinite;
+    text-align: center;
+    width: 100%;
 }
 
 .notice-scroll p {
     font-size: 20px;
+    line-height: 1.8;
     margin: 12px 0;
+    text-align: center;
 }
 
-/* keyframe เลื่อนขึ้น */
+/* เอฟเฟกต์เลื่อนขึ้น */
 @keyframes scrollUp {
-    from { transform: translateY(100%); }
-    to   { transform: translateY(-120%); }
+    0%   { transform: translateY(120%); }
+    100% { transform: translateY(-120%); }
 }
