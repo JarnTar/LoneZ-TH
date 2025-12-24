@@ -1,3 +1,4 @@
+/* ตั้งค่าพื้นหลัง */
 body {
     margin: 0;
     padding: 0;
@@ -5,69 +6,98 @@ body {
     background: url("../img/zombie.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
-    text-align: center;
-}
-
-/* โลโก้ */
-.logo {
-    margin-top: 20px;
-}
-.main-logo {
-    width: 600px;
-    max-width: 95%;
-    filter: drop-shadow(0 5px 8px #ff3300) drop-shadow(0 0 12px #ff3300);
-}
-
-/* ข้อความยินดีต้อนรับ */
-.welcome {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    line-height: 1.5;
-}
-.welcome a {
-    color: #00aaff;
-    text-decoration: underline;
 }
 
 /* ปุ่มเมนู */
-.button, .button-large {
+.button {
     display: inline-block;
     padding: 10px 30px;
     background: #d40000;
     color: white;
-    border-radius: 12px;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 8px 10px;
     text-decoration: none;
+    font-size: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 5px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
-.button:hover, .button-large:hover {
-    background: #960000;
+.button:hover {
+    background: #b90000;
     box-shadow: 0 0 18px rgba(255,0,0,0.9);
+}
+
+/* ปุ่มใหญ่ */
+.button-large {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 10px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    transition: 0.25s;
+}
+.button-large:hover {
+    background: #b90000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+}
+
+/* โลโก้ */
+.logo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-logo {
+    width: 600px;
+    max-width: 95%;
+    display: block;
+    margin: 0 auto;
+    filter:
+        drop-shadow(0 5px #ff3300)
+        drop-shadow(0 0 12px #ff3300);
+}
+
+/* ข้อความต้อนรับ */
+.welcome-box {
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+}
+.welcome-text {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.welcome-text a {
+    color: #5eb8ff;
+    text-decoration: underline;
 }
 
 /* กล่องประกาศ */
 .notice-box {
     width: 100%;
+    max-width: 900px;
     margin: 40px auto 0;
     padding: 20px;
-    background: rgba(0,0,0,0.60);
+    background: rgba(0, 0, 0, 0.60);
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
 }
 
-/* ข้อความแบบ End Credit เลื่อนขึ้น */
+/* ข้อความแบบ End Credit */
 .notice-scroll {
     display: inline-block;
-    animation: scrollUp 22s linear infinite;
-    text-align: center;
     width: 100%;
+    animation: scrollUp 25s linear infinite;
+    animation-delay: 2s;
 }
 
 .notice-scroll p {
@@ -79,6 +109,13 @@ body {
 
 /* เอฟเฟกต์เลื่อนขึ้น */
 @keyframes scrollUp {
-    0%   { transform: translateY(120%); }
+    0%   { transform: translateY(0); }
+    10%  { transform: translateY(0); }
     100% { transform: translateY(-120%); }
+}
+
+/* จัดตำแหน่งเมนู */
+.menu {
+    text-align: center;
+    margin-top: 20px;
 }
