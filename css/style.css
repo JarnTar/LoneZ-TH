@@ -42,3 +42,22 @@ body {
         drop-shadow(0 0 5px  #ff3300)
         drop-shadow(0 0 12px #ff6600);
 }
+/* ปุ่มล่าง – เติมเงิน & ร้านค้า */
+.button-large {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 10px;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    transition: 0.25s;
+}
+
+.button-large:hover {
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+}
