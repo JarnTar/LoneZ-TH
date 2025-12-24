@@ -83,4 +83,11 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}/
+* โลโก้ใหญ่แบบภาพตัวอย่าง */
+.main-logo {
+    width: 600px;        /* ขนาดใหญ่ขึ้น */
+    max-width: 90%;      /* ปรับตามมือถือ */
+    display: block;
+    margin: 30px auto;   /* จัดกลาง + เว้นระยะบน */
 }
