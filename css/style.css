@@ -1,121 +1,87 @@
-/* ตั้งค่าพื้นหลัง */
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background: url("../img/zombie.jpg") no-repeat center center fixed;
+    background: url('bg.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Tahoma', sans-serif;
     color: white;
-}
-
-/* ปุ่มเมนู */
-.button {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #d40000;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    margin: 5px;
-    border: 3px solid #ff0000;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.25s;
-}
-.button:hover {
-    background: #b90000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
-}
-
-/* ปุ่มใหญ่ */
-.button-large {
-    display: inline-block;
-    padding: 12px 35px;
-    background: #d40000;
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-    border-radius: 12px;
-    font-weight: bold;
-    margin: 10px;
-    border: 3px solid #ff0000;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.25s;
-}
-.button-large:hover {
-    background: #b90000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
 /* โลโก้ */
-.logo {
+.logo-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.main-logo {
-    width: 600px;
-    max-width: 95%;
-    display: block;
-    margin: 0 auto;
-    filter:
-        drop-shadow(0 5px #ff3300)
-        drop-shadow(0 0 12px #ff3300);
+.logo {
+    width: 60%;
+    max-width: 420px;
 }
 
 /* ข้อความต้อนรับ */
-.welcome-box {
-    text-align: center;
-    margin-top: 25px;
-    padding: 10px;
-}
 .welcome-text {
-    font-size: 24px;
+    text-align: center;
+    font-size: 26px;
     font-weight: bold;
-    line-height: 1.5;
+    margin-top: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px #000;
 }
+
 .welcome-text a {
-    color: #5eb8ff;
+    color: #4aa3ff;
     text-decoration: underline;
 }
 
+/* ปุ่มเมนู */
+.menu-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.menu-btn {
+    background: red;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #000;
+}
+
 /* กล่องประกาศ */
-.notice-box {
+.announce-box {
     width: 100%;
     max-width: 900px;
-    margin: 40px auto 0;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.60);
+    margin: 30px auto 0 auto;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 25px;
     border-radius: 10px;
+    font-size: 18px;
     overflow: hidden;
     text-align: center;
+    position: relative;
 }
 
-/* ข้อความแบบ End Credit */
-.notice-scroll {
+/* ข้อความประกาศแบบเลื่อน */
+.announce-text {
     display: inline-block;
-    width: 100%;
-    animation: scrollUp 25s linear infinite;
-    animation-delay: 2s;
+    animation: scrollUp 20s linear infinite;
 }
 
-.notice-scroll p {
-    font-size: 20px;
-    line-height: 1.8;
-    margin: 12px 0;
-    text-align: center;
-}
-
-/* เอฟเฟกต์เลื่อนขึ้น */
 @keyframes scrollUp {
-    0%   { transform: translateY(0); }
-    10%  { transform: translateY(0); }
-    100% { transform: translateY(-120%); }
-}
-
-/* จัดตำแหน่งเมนู */
-.menu {
-    text-align: center;
-    margin-top: 20px;
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    10% {
+        transform: translateY(0); /* โชว์นิ่งก่อนเลื่อน */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+    }
 }
