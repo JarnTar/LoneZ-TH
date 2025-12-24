@@ -1,4 +1,4 @@
-/* พื้นหลังหลัก */
+/* พื้นหลัง */
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +8,37 @@ body {
     color: white;
 }
 
+/* โลโก้ */
+.main-logo {
+    width: 600px;
+    max-width: 95%;
+    display: block;
+    margin: 25px auto 0 auto;
+    filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 12px #ff3300);
+}
+
+/* ข้อความเลื่อนใหญ่ */
+.welcome-scroll {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.welcome-scroll span {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 42px;   /* << ใหญ่เท่าข้อความเดิม */
+    font-weight: bold;
+    text-shadow: 0 0 8px black;
+    animation: welcomeMove 20s linear infinite;
+}
+@keyframes welcomeMove {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
 /* ปุ่มเมนู */
 .button {
     display: inline-block;
@@ -15,101 +46,48 @@ body {
     background: #d40000;
     color: white;
     font-size: 22px;
-    text-decoration: none;
-    border-radius: 12px;
     font-weight: bold;
+    text-decoration: none;
     margin: 5px;
+    border-radius: 12px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.25s;
+    transition: 0.2s;
 }
 .button:hover {
-    background: #9b0000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    background: #960000;
 }
 
-/* ปุ่มใหญ่ */
+/* ปุ่มล่าง */
 .button-large {
     display: inline-block;
     padding: 12px 35px;
     background: #d40000;
     color: white;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 12px;
+    font-size: 22px;
     font-weight: bold;
+    text-decoration: none;
     margin: 10px;
+    border-radius: 12px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.25s;
+    transition: 0.2s;
 }
 .button-large:hover {
-    background: #9b0000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+    background: #960000;
 }
 
-/* โลโก้ */
-.main-logo {
-    width: 600px;
-    max-width: 95%;
-    display: block;
-    margin: 30px auto;
-    filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 12px #ff3300);
-}
-
-/* ยินดีต้อนรับแบบเลื่อนช้า (20s) */
-.welcome-area {
-    text-align: center;
-    margin-top: -40px;
-}
-.welcome-text {
-    font-size: 40px;
-    font-weight: bold;
-    animation: welcomeMove 20s linear infinite;
-}
-
-@keyframes welcomeMove {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
-}
-
-/* ข้อความเลื่อนใต้เมนู */
-.scroll-text {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 10px 0 25px 0;
-}
-.scroll-text span {
-    display: inline-block;
-    padding-left: 100%;
-    font-size: 24px;
-    animation: scrollLeft 20s linear infinite;
-}
-
-@keyframes scrollLeft {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
-}
-
-/* กล่องข้อความ End Credit */
+/* กล่องประกาศใหญ่ */
 .announce-box {
-    width: 95%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 15px 25px;
-    background: rgba(0,0,0,0.45);
-    border-radius: 10px;
-    backdrop-filter: blur(3px);
+    width: 92%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    padding: 20px;
 }
 
-.credit-text {
-    font-size: 22px;
-    line-height: 1.6;
-    animation: creditScroll 25s linear infinite;
-}
-
-@keyframes creditScroll {
-    from { transform: translateY(80px); }
-    to   { transform: translateY(-100%); }
+.announce-content {
+    font-size: 24px;
+    line-height: 1.8em;
 }
