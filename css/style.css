@@ -1,4 +1,4 @@
-/* พื้นหลังเว็บ */
+/* พื้นหลังหลัก */
 body {
     margin: 0;
     padding: 0;
@@ -9,26 +9,42 @@ body {
 }
 
 /* ปุ่มเมนู */
-.button,
-.button-large {
+.button {
     display: inline-block;
+    padding: 10px 30px;
     background: #d40000;
     color: white;
-    text-decoration: none;
     font-size: 22px;
-    font-weight: bold;
+    text-decoration: none;
     border-radius: 12px;
+    font-weight: bold;
+    margin: 5px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
+.button:hover {
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
+}
 
-.button { padding: 12px 35px; margin: 8px; }
-.button-large { padding: 14px 45px; margin: 10px; }
-
-.button:hover,
+/* ปุ่มใหญ่ */
+.button-large {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #d40000;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 10px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    transition: 0.25s;
+}
 .button-large:hover {
-    background:#9b0000;
+    background: #9b0000;
     box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
@@ -38,52 +54,62 @@ body {
     max-width: 95%;
     display: block;
     margin: 30px auto;
-    filter:
-        drop-shadow(0 0 5px #ff3300)
-        drop-shadow(0 0 12px #ff3300);
+    filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 12px #ff3300);
 }
 
-/* ข้อความเลื่อนแนวนอน */
+/* ยินดีต้อนรับแบบเลื่อนช้า (20s) */
+.welcome-area {
+    text-align: center;
+    margin-top: -40px;
+}
+.welcome-text {
+    font-size: 40px;
+    font-weight: bold;
+    animation: welcomeMove 20s linear infinite;
+}
+
+@keyframes welcomeMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+/* ข้อความเลื่อนใต้เมนู */
 .scroll-text {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    margin: 10px 0 0;
+    margin: 10px 0 25px 0;
 }
-
 .scroll-text span {
     display: inline-block;
-    font-size: 22px;
-    padding-left:100%;
-    animation: scrollLeft 12s linear infinite;
+    padding-left: 100%;
+    font-size: 24px;
+    animation: scrollLeft 20s linear infinite;
 }
 
 @keyframes scrollLeft {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
 }
 
-/* กล่องประกาศแบบ End Credit */
-.notice-credit-box {
-    width: 90%;
+/* กล่องข้อความ End Credit */
+.announce-box {
+    width: 95%;
     max-width: 900px;
-    height: 350px;
-    margin: 25px auto;
+    margin: 20px auto;
+    padding: 15px 25px;
     background: rgba(0,0,0,0.45);
-    border-radius: 15px;
-    padding: 10px;
-    overflow: hidden;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
 }
 
-/* เนื้อหาที่จะเลื่อนขึ้น */
-.notice-credit-content {
-    position: relative;
+.credit-text {
     font-size: 22px;
-    line-height: 1.8;
-    animation: creditScroll 35s linear infinite;
+    line-height: 1.6;
+    animation: creditScroll 25s linear infinite;
 }
 
 @keyframes creditScroll {
-    0%   { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
+    from { transform: translateY(80px); }
+    to   { transform: translateY(-100%); }
 }
