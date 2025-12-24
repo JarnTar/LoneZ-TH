@@ -84,3 +84,33 @@ animation: scrollLoop 18s linear infinite;
 0% { transform: translateX(100%); }
 100% { transform: translateX(-100%); }
 }
+/* กล่องประกาศแบบ End Credit */
+.notice-credit-box {
+    position: relative;
+    width: 92%;
+    max-width: 900px;
+    height: 350px; /* ความสูงของกรอบ */
+    margin: 30px auto;
+    overflow: hidden; /* ซ่อนส่วนที่เลื่อนออก */
+    background: rgba(0,0,0,0.45);
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+/* กล่องข้อความข้างใน */
+.notice-credit-content {
+    position: absolute;
+    width: 100%;
+    bottom: -100%; /* เริ่มจากล่างสุด */
+    font-size: 22px;
+    line-height: 1.8;
+    color: white;
+    animation: creditScroll 28s linear infinite;
+}
+
+/* เอฟเฟกต์เลื่อนขึ้นแบบ End Credit */
+@keyframes creditScroll {
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
+}
