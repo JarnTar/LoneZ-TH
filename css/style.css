@@ -1,105 +1,44 @@
-/* พื้นหลัง */
+/* รีเซ็ตเบื้องต้น */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     background: url("../img/zombie.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
-    text-align: center;
 }
 
-/* กล่องพื้นดำใส */
-.container {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    margin-top: 40px;
-}
-
-/* หัวข้อ */
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-/* ปุ่มเมนูบนสุด */
+/* ปุ่มเมนูบน */
 .button {
     display: inline-block;
-    padding: 16px 30px;       /* ใหญ่ขึ้น */
-    background: #d40000;      /* แดงสด */
+    padding: 10px 30px;
+    background: #d40000;
     color: white;
     text-decoration: none;
-    font-size: 22px;          /* ตัวใหญ่ขึ้น */
-    border-radius: 10px;
-    margin: 6px;
+    font-size: 20px;
+    border-radius: 12px;
     font-weight: bold;
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6); /* เรืองแสง */
-    transition: 0.2s;
+    margin: 5px;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
+    transition: 0.25s;
 }
 
 .button:hover {
     background: #9b0000;
-    box-shadow: 0 0 18px rgba(255, 0, 0, 0.9); 
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* ปุ่มด้านล่าง : สมัครสมาชิก / ดาวน์โหลด */
-.button-large {
-    display: inline-block;
-    padding: 18px 34px;
-    background: #d40000;
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    border-radius: 12px;
-    margin-top: 12px;
-    font-weight: bold;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
-    transition: 0.2s;
-}
-
-.button-large:hover {
-    background: #9b0000;
-}
-
-/* โลโก้ */
-.logo img {
-    width: 280px;                   /* ขนาดโลโก้ */
-    display: block;                 
-    margin: 0 auto;                 /* จัดกลาง */
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7)); /* เงาแดง */
-}
-/* ขยายโลโก้ */
+/* โลโก้แบบใหม่ใหญ่ + เงาไฟ */
 .main-logo {
-    width: 340px;      /* ขนาดใหญ่ขึ้น */
-    max-width: 90%;
-    margin-top: 25px;
-    border-radius: 10px;
+    width: 600px;          /* <<< ปรับขนาดโลโก้ใหญ่ */
+    max-width: 95%;        /* ปรับอัตโนมัติในมือถือ */
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}/
-* โลโก้ใหญ่แบบภาพตัวอย่าง */
-.main-logo {
-    width: 600px;        /* ขนาดใหญ่ขึ้น */
-    max-width: 90%;      /* ปรับตามมือถือ */
-    display: block;
-    margin: 30px auto;   /* จัดกลาง + เว้นระยะบน */
-}
-/* เอฟเฟกต์เงาไฟรอบโลโก้ */
-.main-logo {
-    width: 600px;
-    max-width: 90%;
-    display: block;
-    margin: 30px auto;
+    margin: 30px auto;     /* จัดกลาง */
 
-    filter: drop-shadow(0 0 10px #ff0000)
-            drop-shadow(0 0 20px #ff0000)
-            drop-shadow(0 0 35px #ff3300)
-            drop-shadow(0 0 55px #ff6600);
+    /* เงาไฟเรืองแบบ 4 ชั้น */
+    filter: 
+        drop-shadow(0 0 10px #ff0000)
+        drop-shadow(0 0 20px #ff0000)
+        drop-shadow(0 0 35px #ff3300)
+        drop-shadow(0 0 55px #ff6600);
 }
