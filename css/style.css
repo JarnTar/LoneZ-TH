@@ -8,7 +8,7 @@ body {
     color: white;
 }
 
-/* ปุ่มเมนูบน */
+/* ปุ่มเมนู */
 .button {
     display: inline-block;
     padding: 10px 30px;
@@ -19,26 +19,26 @@ body {
     border-radius: 12px;
     font-weight: bold;
     margin: 5px;
-    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
 
 .button:hover {
     background: #9b0000;
-    box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* โลโก้ใหญ่ + เงาไฟนุ่ม */
+/* โลโก้ใหญ่ */
 .main-logo {
-    width: 600px;     /* ขนาดโลโก้ใหญ่ */
-    max-width: 95%;   /* ปรับขนาดเมื่อจอเล็ก */
+    width: 600px;
+    max-width: 95%;
     display: block;
-    margin: 30px auto; /* จัดกลาง */
+    margin: 30px auto;
 }
 
-/* เงาไฟแบบบาง ๆ ไม่ล้น */
-.logo img, .main-logo {
+/* เงาไฟแบบบาง ๆ พอดี */
+.main-logo {
     filter:
-        drop-shadow(0 0 4px #ff3300)
-        drop-shadow(0 0 8px #ff6600);
+        drop-shadow(0 0 5px  #ff3300)
+        drop-shadow(0 0 12px #ff6600);
 }
