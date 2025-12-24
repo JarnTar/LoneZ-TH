@@ -1,17 +1,22 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url("../img/zombie.jpg") no-repeat center center fixed;
+    background: url("../img/Zz1.jpeg") no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
 }
 
-/* คอนเทนเนอร์กลาง */
+/* โลโก้ */
+.logo-img {
+    width: 320px;
+    margin-top: 25px;
+}
+
+/* คอนเทนเนอร์ */
 .container {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* หัวข้อหลัก */
@@ -42,8 +47,8 @@ body {
 }
 
 .register-box h2 {
-    color: #ff3c3c;
     font-size: 26px;
+    color: #ff3c3c;
     margin-bottom: 10px;
 }
 
@@ -83,7 +88,6 @@ input::placeholder {
     font-size: 26px;
     font-weight: bold;
     letter-spacing: 8px;
-    text-align: center;
 }
 
 /* ปุ่ม */
@@ -97,7 +101,6 @@ button {
     margin-top: 15px;
     color: white;
     font-weight: bold;
-    cursor: pointer;
     box-shadow: 0 0 15px rgba(255,0,0,0.4);
 }
 
@@ -105,17 +108,11 @@ button:hover {
     background: #a10000;
 }
 
-/* ลิงก์กลับ */
+/* Back link */
 .back {
     margin-top: 15px;
 }
 
 .back a {
     color: #ff6666;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.back a:hover {
-    text-decoration: underline;
 }
