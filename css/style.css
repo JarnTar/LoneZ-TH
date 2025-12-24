@@ -1,126 +1,88 @@
-/* --- พื้นหลัง + ฟอนต์ --- */
+/* --- พื้นหลัง --- */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url("../img/WarzLonez.png") no-repeat center center fixed;
+    background: url("../img/Zz1.jpeg") no-repeat center center fixed;
     background-size: cover;
-    text-align: center;
     color: white;
+    text-align: center;
 }
 
-/* --- โลโก้ --- */
+/* โลโก้ */
 .logo-container {
     margin-top: 25px;
 }
 
 .logo {
     width: 330px;
-    max-width: 90%;
     filter: drop-shadow(0 0 10px red);
 }
 
-/* --- หัวข้อเรืองแสงด้านบน --- */
-.top-title-box {
-    width: 95%;
-    max-width: 750px;
-    margin: 20px auto 15px auto;
-    padding: 15px 20px;
-    background: rgba(0, 0, 0, 0.85);
-    border: 2px solid #ff0000;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    text-align: center;
-}
-
-.top-title-box h2 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 12px rgba(255, 0, 0, 1);
-}
-
-/* --- ข้อความต้อนรับ --- */
-.welcome-text {
-    font-size: 20px;
-    width: 95%;
-    max-width: 900px;
-    margin: 10px auto;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-}
-
-.welcome-text a {
-    color: #00c3ff;
-    font-weight: bold;
-}
-
-/* --- ปุ่มเมนู --- */
+/* ปุ่มเมนู */
 .menu-container {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .second-row {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .menu-btn {
     background: red;
     border: none;
-    color: white;
     padding: 10px 22px;
     font-size: 18px;
+    color: white;
     border-radius: 10px;
     margin: 6px;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     transition: 0.2s;
 }
 
 .menu-btn:hover {
     background: #b30000;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1);
 }
 
-/* --- กล่องประกาศ --- */
+/* กล่องประกาศแบบ End Credit */
 .announce-box {
     width: 95%;
     max-width: 900px;
-    margin: 25px auto;
+    height: 200px;
+    overflow: hidden;
+    margin: 30px auto;
     background: rgba(0, 0, 0, 0.75);
-    padding: 20px;
+    border: 2px solid red;
     border-radius: 12px;
-    border: 2px solid rgba(255, 0, 0, 0.6);
-    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
     backdrop-filter: blur(4px);
 }
 
-.announce-text p {
-    font-size: 18px;
-    margin: 8px 0;
+/* ข้อความเลื่อนขึ้น */
+.announce-scroll {
+    display: inline-block;
+    text-align: center;
+    animation: scroll-up 12s ease-in-out infinite;
+    margin-top: 200px;
 }
 
-/* --- สำหรับมือถือ --- */
+.announce-scroll p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Animation: ค้าง 2 วิ → ค่อยเลื่อนขึ้น */
+@keyframes scroll-up {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(0); }      /* ค้าง 2 วินาที */
+    100% { transform: translateY(-100%); } /* เลื่อนขึ้นเรื่อยๆ */
+}
+
+/* Mobile */
 @media screen and (max-width: 600px) {
-
-    .welcome-text {
-        font-size: 17px;
-    }
-
-    .menu-btn {
-        font-size: 16px;
-        padding: 9px 18px;
-    }
-
-    .announce-text p {
-        font-size: 16px;
-    }
-
-    .top-title-box h2 {
-        font-size: 24px;
-    }
+    .menu-btn { font-size: 16px; padding: 9px 18px; }
+    .announce-scroll p { font-size: 16px; }
 }
