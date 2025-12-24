@@ -9,44 +9,26 @@ body {
 }
 
 /* ปุ่มเมนู */
-.button {
-    display: inline-block;
-    padding: 12px 35px;
-    background: #d40000;
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 12px;
-    margin: 8px;
-    border: 3px solid #ff0000;
-    box-shadow: 0 0 12px rgba(255,0,0,0.6);
-    transition: 0.25s;
-}
-
-.button:hover {
-    background: #9b0000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.9);
-}
-
-/* ปุ่มล่าง (ขนาดใหญ่ขึ้น) */
+.button,
 .button-large {
     display: inline-block;
-    padding: 14px 45px;
     background: #d40000;
     color: white;
     text-decoration: none;
     font-size: 22px;
     font-weight: bold;
     border-radius: 12px;
-    margin: 10px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
 
+.button { padding: 12px 35px; margin: 8px; }
+.button-large { padding: 14px 45px; margin: 10px; }
+
+.button:hover,
 .button-large:hover {
-    background: #9b0000;
+    background:#9b0000;
     box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
@@ -61,33 +43,47 @@ body {
         drop-shadow(0 0 12px #ff3300);
 }
 
+/* ข้อความเลื่อนแนวนอน */
+.scroll-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10px 0 0;
+}
+
+.scroll-text span {
+    display: inline-block;
+    font-size: 22px;
+    padding-left:100%;
+    animation: scrollLeft 12s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
 /* กล่องประกาศแบบ End Credit */
 .notice-credit-box {
-    position: relative;
-    width: 92%;
+    width: 90%;
     max-width: 900px;
-    height: 380px;
-    margin: 30px auto;
-    overflow: hidden;
+    height: 350px;
+    margin: 25px auto;
     background: rgba(0,0,0,0.45);
-    padding: 15px;
-    border-radius: 18px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
 }
 
-/* ข้อความ End Credit เลื่อนขึ้น */
+/* เนื้อหาที่จะเลื่อนขึ้น */
 .notice-credit-content {
-    position: absolute;
-    width: 100%;
-    bottom: -100%;
+    position: relative;
     font-size: 22px;
     line-height: 1.8;
-    color: white;
-    animation: creditScroll 28s linear infinite;
+    animation: creditScroll 35s linear infinite;
 }
 
-/* เอฟเฟกต์ End Credit */
 @keyframes creditScroll {
-    0% { bottom: -100%; }
-    100% { bottom: 100%; }
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
 }
