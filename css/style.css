@@ -30,10 +30,11 @@ body {
 
 .welcome-text a {
     color: #4aa3ff;
+    font-weight: bold;
     text-decoration: underline;
 }
 
-/* ปุ่มเมนู */
+/* เมนู */
 .menu-container {
     text-align: center;
     margin-top: 15px;
@@ -69,7 +70,7 @@ body {
 /* ข้อความเลื่อน */
 .announce-text {
     display: inline-block;
-    animation: scrollUp 20s linear infinite;
+    animation: scrollUp 22s linear infinite;
 }
 
 @keyframes scrollUp {
@@ -83,5 +84,6 @@ body {
     }
     100% {
         transform: translateY(-100%);
+        opacity: 1;
     }
 }
