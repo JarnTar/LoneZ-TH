@@ -1,4 +1,4 @@
-/* ตั้งค่าพื้นหลัง */
+/* พื้นหลัง */
 body {
     margin: 0;
     padding: 0;
@@ -6,61 +6,6 @@ body {
     background: url("../img/zombie.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
-}
-
-/* โลโก้ */
-.main-logo {
-    width: 600px;
-    max-width: 95%;
-    display: block;
-    margin: 20px auto 10px;
-    filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 12px #ff3300);
-}
-
-/* ข้อความ welcome อยู่กึ่งกลางระหว่างโลโก้กับเมนู */
-.welcome-fixed {
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-/* ข้อความเลื่อน */
-.welcome-scroll {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 5px;
-}
-
-.welcome-scroll span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scrollText 20s linear infinite;
-    animation-delay: 2s; /* ⭐ เริ่มเลื่อนหลังโหลด 2 วิ */
-    color: #ffffff;
-}
-
-/* แถบใส่ลิงก์ (กดได้ทั้งเส้นข้อความ) */
-.scroll-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    z-index: 5;
-}
-
-/* เอฟเฟกต์เลื่อนข้อความ */
-@keyframes scrollText {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
 }
 
 /* ปุ่มเมนู */
@@ -71,8 +16,8 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    border-radius: 12px;
     font-weight: bold;
+    border-radius: 12px;
     margin: 5px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
@@ -84,7 +29,7 @@ body {
     box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* ปุ่มล่าง */
+/* ปุ่มใหญ่ */
 .button-large {
     display: inline-block;
     padding: 12px 35px;
@@ -92,8 +37,8 @@ body {
     color: white;
     text-decoration: none;
     font-size: 22px;
-    border-radius: 12px;
     font-weight: bold;
+    border-radius: 12px;
     margin: 10px;
     border: 3px solid #ff0000;
     box-shadow: 0 0 12px rgba(255,0,0,0.6);
@@ -105,13 +50,50 @@ body {
     box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
+/* โลโก้ */
+.main-logo {
+    width: 600px;
+    max-width: 95%;
+    display: block;
+    margin: 30px auto;
+}
+
+/* ข้อความด้านบน (อยู่กับที่) */
+.welcome-fixed {
+    text-align: center;
+    font-size: 26px;
+    margin-top: -10px;
+}
+
+.welcome-fixed a {
+    color: #00aaff;
+    font-weight: bold;
+}
+
 /* กล่องประกาศ */
 .notice-box {
     width: 100%;
-    margin-top: 25px;
+    max-width: 100%;
+    margin-top: 30px;
     padding: 20px;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.60);
     border-radius: 10px;
-    font-size: 18px;
-    line-height: 1.7;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* เลื่อนขึ้นแบบ End Credit */
+.notice-scroll {
+    animation: scrollUp 25s linear infinite;
+}
+
+.notice-scroll p {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+/* keyframe เลื่อนขึ้น */
+@keyframes scrollUp {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(-120%); }
 }
