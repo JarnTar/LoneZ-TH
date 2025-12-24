@@ -1,54 +1,69 @@
-/* พื้นหลัง */
+/* ตั้งค่าพื้นหลัง */
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: url('../img/zombie.jpg') no-repeat center center fixed;
+    background: url("../img/zombie.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
 
-/* ข้อความเลื่อน (ยินดีต้อนรับสู่ LoneZ) */
+/* โลโก้ */
+.main-logo {
+    width: 600px;
+    max-width: 95%;
+    display: block;
+    margin: 20px auto 10px;
+    filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 12px #ff3300);
+}
+
+/* ข้อความ welcome อยู่กึ่งกลางระหว่างโลโก้กับเมนู */
+.welcome-fixed {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* ข้อความเลื่อน */
 .welcome-scroll {
     position: relative;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    height: 40px;
-    margin-top: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
 }
 
 .welcome-scroll span {
     display: inline-block;
     padding-left: 100%;
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 0 0 10px black;
-    animation: scrollLeft 20s linear infinite;
+    animation: scrollText 20s linear infinite;
+    animation-delay: 2s; /* ⭐ เริ่มเลื่อนหลังโหลด 2 วิ */
+    color: #ffffff;
 }
 
-@keyframes scrollLeft {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-100%); }
-}
-
-/* ลิงก์โปร่งใส กดได้ */
+/* แถบใส่ลิงก์ (กดได้ทั้งเส้นข้อความ) */
 .scroll-link {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 25px;
     z-index: 5;
-    background: transparent;
 }
 
-/* ปุ่มเมนูบน */
-.menu {
-    text-align: center;
-    margin-top: 20px;
+/* เอฟเฟกต์เลื่อนข้อความ */
+@keyframes scrollText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
 }
 
+/* ปุ่มเมนู */
 .button {
     display: inline-block;
     padding: 10px 30px;
@@ -56,20 +71,20 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    font-weight: bold;
     border-radius: 12px;
-    border: 2px solid #ff0000;
+    font-weight: bold;
     margin: 5px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
 
 .button:hover {
-    background: #900000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.8);
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* ปุ่มล่าง (เติมเงิน ร้านค้า) */
+/* ปุ่มล่าง */
 .button-large {
     display: inline-block;
     padding: 12px 35px;
@@ -78,30 +93,25 @@ body {
     text-decoration: none;
     font-size: 22px;
     border-radius: 12px;
-    border: 3px solid #ff0000;
+    font-weight: bold;
     margin: 10px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 12px rgba(255,0,0,0.6);
     transition: 0.25s;
 }
 
 .button-large:hover {
-    background: #900000;
-    box-shadow: 0 0 18px rgba(255,0,0,0.8);
+    background: #9b0000;
+    box-shadow: 0 0 18px rgba(255,0,0,0.9);
 }
 
-/* กล่องประกาศด้านล่าง (เต็มกว้าง 100%) */
+/* กล่องประกาศ */
 .notice-box {
     width: 100%;
-    max-width: 100%;
-    margin-top: 30px;
-    background: rgba(0,0,0,0.55);
+    margin-top: 25px;
     padding: 20px;
-    backdrop-filter: blur(4px);
-    box-sizing: border-box;
-}
-
-.notice-box p {
+    background: rgba(0,0,0,0.55);
+    border-radius: 10px;
     font-size: 18px;
-    line-height: 1.6;
-    margin: 10px 0;
+    line-height: 1.7;
 }
